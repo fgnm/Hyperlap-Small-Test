@@ -1,0 +1,21 @@
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+eclipse.project.name = appName + '-core'
+
+dependencies {
+	api "com.badlogicgames.gdx:gdx:$gdxVersion"
+	api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+	api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+
+	api "net.onedaybeard.artemis:artemis-odb:$artemisOdbVersion"
+//	implementation 'net.onedaybeard.artemis:artemis-odb-serializer-json-libgdx:2.3.0'
+
+
+	api "games.rednblack.hyperlap2d:runtime-libgdx:$h2dVersion"
+
+	api "com.esotericsoftware.spine:spine-libgdx:$spineVersion"
+	api "games.rednblack.hyperlap2d:libgdx-spine-extension:$h2dSpineExtension"
+
+
+
+	implementation "com.github.raeleus:stripe:$stripe"
+}
