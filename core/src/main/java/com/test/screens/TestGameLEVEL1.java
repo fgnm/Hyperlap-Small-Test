@@ -5,7 +5,8 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.test.GameMain;
-import com.test.systems.CameraSystemSmooth;
+import com.test.systems.AddPlayerLibraryItemInRuntimeSystem;
+import com.test.systems.CameraSystem;
 import games.rednblack.editor.renderer.SceneLoader;
 import games.rednblack.editor.renderer.resources.AsyncResourceManager;
 
@@ -27,7 +28,10 @@ public class TestGameLEVEL1 extends TestGameScreen {
 
 
         // set SceneLoader
-        mSceneLoader.getEngine().getSystem(CameraSystemSmooth.class).setSceneLoader(mSceneLoader);
+        mSceneLoader.getEngine().getSystem(CameraSystem.class).setSceneLoader(mSceneLoader);
+        mSceneLoader.getEngine().getSystem(AddPlayerLibraryItemInRuntimeSystem.class).setSceneLoader(mSceneLoader);
+
+
 
     }
 
@@ -49,7 +53,7 @@ public class TestGameLEVEL1 extends TestGameScreen {
             mSceneLoader.loadScene("MainScene", mViewport);
 
             // set SceneLoader
-            mSceneLoader.getEngine().getSystem(CameraSystemSmooth.class).setSceneLoader(mSceneLoader);
+            mSceneLoader.getEngine().getSystem(CameraSystem.class).setSceneLoader(mSceneLoader);
 
             // set flag false - scene loaded and player alive
             firstScreenNewScene = false;

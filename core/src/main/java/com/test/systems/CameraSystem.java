@@ -15,7 +15,7 @@ import games.rednblack.editor.renderer.components.physics.PhysicsBodyComponent;
 import games.rednblack.editor.renderer.utils.ItemWrapper;
 
 @All(ViewPortComponent.class)
-public class CameraSystemSmooth extends IteratingSystem {
+public class CameraSystem extends IteratingSystem {
 
     private SceneLoader mSceneLoader;
     private ItemWrapper root;
@@ -26,7 +26,7 @@ public class CameraSystemSmooth extends IteratingSystem {
     protected ComponentMapper<PhysicsBodyComponent> bodyMapper;
     private final float yMin, yMax;
 
-    public CameraSystemSmooth(float yMin, float yMax) {
+    public CameraSystem(float yMin, float yMax) {
         this.yMin = yMin;
         this.yMax = yMax;
     }
@@ -41,7 +41,7 @@ public class CameraSystemSmooth extends IteratingSystem {
     protected void process(int entity) {
 
         if (playerEntity == -1) {
-            playerEntity = HelperClass.setPlayerEntity(mSceneLoader,root,playerEntity,"CameraSystemSmooth");
+            playerEntity = HelperClass.setPlayerEntity(mSceneLoader,root,playerEntity,"CameraSystem");
             return;
         }
 

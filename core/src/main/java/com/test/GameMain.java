@@ -7,13 +7,13 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.Logger;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.test.components.PlayerComponent;
 import com.test.screens.TestGameLEVEL1;
-import com.test.systems.CameraSystemSmooth;
+import com.test.systems.AddPlayerLibraryItemInRuntimeSystem;
+import com.test.systems.CameraSystem;
 import games.rednblack.editor.renderer.SceneConfiguration;
 import games.rednblack.editor.renderer.SceneLoader;
 import games.rednblack.editor.renderer.resources.AsyncResourceManager;
@@ -74,7 +74,8 @@ public class GameMain extends Game {
 		config.setResourceRetriever(resourceManager);
 
 		// add systems
-		config.addSystem(new CameraSystemSmooth(3,7));
+		config.addSystem(new CameraSystem(3,7));
+		config.addSystem(new AddPlayerLibraryItemInRuntimeSystem());
 
 		// Initialize HyperLap2D's SceneLoader, all assets will be loaded here
 		mSceneLoader = new SceneLoader(config);

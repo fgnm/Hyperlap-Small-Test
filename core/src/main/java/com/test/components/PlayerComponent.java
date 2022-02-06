@@ -5,6 +5,8 @@ import com.artemis.PooledComponent;
 
 public class PlayerComponent extends PooledComponent {
 
+    public int touchedPlatforms = 0;
+
     public boolean jump = false;
     public boolean climb = false;
     public boolean punch = false;
