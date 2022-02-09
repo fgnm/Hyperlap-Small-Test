@@ -74,7 +74,7 @@ public class GameMain extends Game {
 		config.setResourceRetriever(resourceManager);
 
 		// add systems
-		config.addSystem(new CameraSystem(3,7));
+		config.addSystem(new CameraSystem(-50,50));
 		config.addSystem(new AddPlayerLibraryItemInRuntimeSystem());
 
 		// Initialize HyperLap2D's SceneLoader, all assets will be loaded here

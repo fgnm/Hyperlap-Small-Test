@@ -1,61 +1,81 @@
 pack.png
-	size: 256, 256
+	size: 2048, 2048
 	filter: Linear, Linear
+01_Zahnrad
+	bounds: 1, 1001, 551, 550
+02_Zahnrad
+	bounds: 1, 453, 546, 546
+03_Zahnrad
+	bounds: 959, 1135, 543, 542
+Ground_Links
+	bounds: 959, 990, 707, 143
+Ground_Links_Band
+	bounds: 905, 1679, 707, 368
+Ground_Mitte
+	bounds: 710, 703, 681, 141
+Ground_Mitte_Band
+	bounds: 1, 1553, 902, 494
+Ground_Rechts
+	bounds: 959, 846, 707, 142
+Ground_Rechts_Band
+	bounds: 1, 83, 707, 368
+Stamp
+	bounds: 554, 930, 403, 621
 explorer-explorerback_hand
-	bounds: 147, 1, 21, 22
+	bounds: 1423, 752, 21, 22
 explorer-explorerback_hand_throw
-	bounds: 181, 164, 28, 36
+	bounds: 1393, 738, 28, 36
 explorer-explorerbody
-	bounds: 106, 109, 50, 74
+	bounds: 905, 1603, 50, 74
 explorer-explorercollar
-	bounds: 178, 202, 46, 23
+	bounds: 1504, 1608, 46, 23
 explorer-explorereyebrow01
-	bounds: 66, 3, 15, 5
+	bounds: 1614, 1794, 15, 5
 explorer-explorereyebrow02
-	bounds: 158, 112, 17, 9
+	bounds: 1458, 790, 17, 9
 explorer-explorerface01
-	bounds: 1, 1, 63, 68
+	bounds: 1393, 776, 63, 68
 explorer-explorerface02
-	bounds: 106, 185, 70, 70
+	bounds: 1, 11, 70, 70
 explorer-explorerfoot
-	bounds: 106, 1, 39, 22
+	bounds: 1614, 1801, 39, 22
 explorer-explorerguide
-	bounds: 1, 71, 103, 184
+	bounds: 1614, 1863, 103, 184
 explorer-explorergun
-	bounds: 66, 10, 38, 59
+	bounds: 1719, 1988, 38, 59
 explorer-explorerhat01
-	bounds: 106, 25, 91, 36
+	bounds: 1614, 1825, 91, 36
 explorer-explorerhat02
-	bounds: 106, 63, 92, 44
+	bounds: 1504, 1633, 92, 44
 explorer-explorerleft_eye_closed
-	bounds: 199, 25, 13, 13
+	bounds: 1598, 1664, 13, 13
 explorer-explorerleft_eye_open
-	bounds: 177, 113, 13, 13
+	bounds: 1481, 831, 13, 13
 explorer-explorerlower_arm
-	bounds: 211, 163, 17, 37
+	bounds: 1759, 2010, 17, 37
 explorer-explorerlower_leg
-	bounds: 210, 128, 18, 33
+	bounds: 73, 18, 18, 33
 explorer-explorermouth01
-	bounds: 170, 7, 33, 16
+	bounds: 143, 65, 33, 16
 explorer-explorermouth02
-	bounds: 199, 40, 33, 16
+	bounds: 1504, 1590, 33, 16
 explorer-explorermouth03
-	bounds: 214, 22, 33, 16
+	bounds: 1552, 1615, 33, 16
 explorer-explorernose
-	bounds: 219, 76, 9, 14
+	bounds: 1707, 1847, 9, 14
 explorer-explorerpupil
-	bounds: 170, 2, 3, 3
+	bounds: 549, 996, 3, 3
 explorer-explorerright_eye_closed
-	bounds: 226, 210, 17, 15
+	bounds: 73, 1, 17, 15
 explorer-explorerright_eye_open
-	bounds: 158, 123, 17, 15
+	bounds: 92, 1, 17, 15
 explorer-explorerspritesheetWalk
-	bounds: 178, 227, 68, 28
+	bounds: 73, 53, 68, 28
 explorer-explorertop_hand
-	bounds: 181, 128, 27, 34
+	bounds: 905, 1567, 27, 34
 explorer-explorertop_hand_gun
-	bounds: 200, 92, 27, 34
+	bounds: 1719, 1952, 27, 34
 explorer-explorerupper_arm
-	bounds: 158, 140, 21, 43
+	bounds: 1458, 801, 21, 43
 explorer-explorerupper_leg
-	bounds: 200, 58, 17, 32
+	bounds: 1393, 704, 17, 32
