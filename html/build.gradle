@@ -2,6 +2,9 @@
 buildscript {
     repositories {
         mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
     }
     dependencies {
         classpath "org.gretty:gretty:3.0.7"
