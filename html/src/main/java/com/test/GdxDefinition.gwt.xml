@@ -9,6 +9,9 @@
     <inherits name="com.ray3k.stripe" />
     <inherits name="com.esotericsoftware.spine"/>
 
+    <inherits name="com.brashmonkey.spriter101"/>
+    <inherits name="com.brashmonkey.spriter"/>
+
 	<inherits name="com.test.GameMain" />
     <entry-point class="com.test.gwt.GwtLauncher" />
     <set-configuration-property name="gdx.assetpath" value="../assets" />
@@ -27,6 +30,9 @@
     <extend-configuration-property name="artemis.reflect.include" value="com.test.Scripts" />
 
     <extend-configuration-property name="artemis.reflect.include" value="games.rednblack.h2d.extention.spine" />
+
+    <extend-configuration-property name="gdx.reflect.include" value="com.brashmonkey.spriter.SCMLReader" />
+    <extend-configuration-property name="artemis.reflect.include" value="com.brashmonkey.spriter.SCMLReader" />
 
     <extend-configuration-property name="gdx.reflect.exclude" value="com.badlogic.gdx.graphics.g3d.environment.AmbientCubemap" />
     <extend-configuration-property name="gdx.reflect.exclude" value="com.badlogic.gdx.graphics.g3d.environment.DirectionalLight" />

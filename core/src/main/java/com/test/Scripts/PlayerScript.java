@@ -9,6 +9,7 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.Fixture;
 
+import com.test.GameMain;
 import com.test.components.PlayerComponent;
 import games.rednblack.editor.renderer.components.MainItemComponent;
 import games.rednblack.editor.renderer.components.NodeComponent;
@@ -90,6 +91,7 @@ public class PlayerScript extends BasicScript implements PhysicsContact {
         switch (direction) {
             case JUMP:
                 TransformComponent transformComponent = transformMapper.get(playerEntity);
+
                 impulse.set(speed.x, transformComponent.y < 6 ? 5 : speed.y);
                 break;
             case LEFT:
