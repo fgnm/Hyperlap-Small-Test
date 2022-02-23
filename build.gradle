@@ -7,8 +7,6 @@ buildscript {
 		gradlePluginPortal()
 		maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
 		maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
-		maven {  url 'https://raw.github.com/Trixt0r/gdx-spriter/mvn/' }
-		maven {  url 'https://raw.github.com/Trixt0r/spriter/mvn/' }
 	}
 	dependencies {
 		classpath "com.android.tools.build:gradle:$androidPluginVersion"
@@ -31,11 +29,6 @@ buildscript {
 allprojects {
 	apply plugin: 'eclipse'
 	apply plugin: 'idea'
-
-	repositories {
-		maven {  url 'https://raw.github.com/Trixt0r/gdx-spriter/mvn/' }
-		maven {  url 'https://raw.github.com/Trixt0r/spriter/mvn/' }
-	}
 }
 
 configure(subprojects - project(':android')) {

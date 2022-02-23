@@ -19,5 +19,8 @@ dependencies {
 
 	implementation "com.github.raeleus:stripe:$stripe"
 
-	implementation 'com.brashmonkey.spriter:gdx-spriter:1.0.1'
+	implementation 'com.github.Trixt0r:gdx-spriter:9f8e8d3773'
+
+	'com.github.Trixt0r:gdx-spriter:9f8e8d3773'
+//	implementation 'com.brashmonkey.spriter:gdx-spriter:1.0.1'
 }

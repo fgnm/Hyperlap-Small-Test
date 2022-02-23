@@ -2,9 +2,6 @@
 buildscript {
     repositories {
         mavenCentral()
-        flatDir {
-            dirs 'libs'
-        }
     }
     dependencies {
         classpath "org.gretty:gretty:3.0.7"
@@ -30,12 +27,6 @@ gwt {
 //	compiler.style = org.wisepersist.gradle.plugins.gwt.Style.DETAILED
 }
 
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-}
-
 dependencies {
     implementation project(':core')
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
@@ -58,8 +49,8 @@ dependencies {
     implementation "com.esotericsoftware.spine:spine-libgdx:$spineVersion:sources"
     implementation "games.rednblack.hyperlap2d:libgdx-spine-extension:$h2dSpineExtension:sources"
 
-    implementation name: 'gdx-spriter-1.0.1-sources'
-    implementation name: 'spriter-1.0.1-sources'
+//    implementation name: 'gdx-spriter-1.0.1-sources'
+//    implementation name: 'spriter-1.0.1-sources'
 
 //	implementation "net.onedaybeard.artemis:artemis-odb-serializer:$artemisOdbVersion:sources"
 //	implementation "net.onedaybeard.artemis:artemis-odb-serializer-json-libgdx:$artemisOdbVersion:sources"

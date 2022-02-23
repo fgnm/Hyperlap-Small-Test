@@ -61,7 +61,7 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
         components.add(new PlayerComponent());
         components.add(new SpineMustManagedComponent());
 
-        HelperClass.loadCompositeFromLib(mSceneLoader,"SpineExplorerV4","Default",0,5,components);
+        HelperClass.loadCompositeFromLib(mSceneLoader,"SpineEiV1","Default",0,5,components);
 
         System.out.println("[AddPlayerLibraryItemInRuntimeSystem] addComponentByTagName");
 
@@ -77,4 +77,6 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
 
 
     }
+
+
 }

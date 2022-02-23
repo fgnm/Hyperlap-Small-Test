@@ -1,75 +1,41 @@
 pack.png
-	size: 1024, 2048
+	size: 1024, 512
 	filter: Linear, Linear
-01_Zahnrad
-	bounds: 1, 1496, 551, 550
-02_Zahnrad
-	bounds: 1, 948, 546, 546
-03_Zahnrad
-	bounds: 1, 404, 543, 542
-Stamp
-	bounds: 554, 1425, 403, 621
-explorer-explorerback_hand
-	bounds: 1, 1, 21, 22
-explorer-explorerback_hand_throw
-	bounds: 73, 180, 28, 36
-explorer-explorerbody
-	bounds: 1, 70, 50, 74
-explorer-explorercollar
-	bounds: 106, 295, 46, 23
-explorer-explorereyebrow01
-	bounds: 53, 100, 15, 5
-explorer-explorereyebrow02
-	bounds: 200, 363, 17, 9
-explorer-explorerface01
-	bounds: 959, 1978, 63, 68
-explorer-explorerface02
-	bounds: 1, 146, 70, 70
-explorer-explorerfoot
-	bounds: 270, 380, 39, 22
-explorer-explorerguide
-	bounds: 1, 218, 103, 184
-explorer-explorergun
-	bounds: 959, 1917, 38, 59
-explorer-explorerhat01
-	bounds: 106, 320, 91, 36
-explorer-explorerhat02
-	bounds: 106, 358, 92, 44
-explorer-explorerleft_eye_closed
-	bounds: 106, 244, 13, 13
-explorer-explorerleft_eye_open
-	bounds: 135, 280, 13, 13
-explorer-explorerlower_arm
-	bounds: 53, 107, 17, 37
-explorer-explorerlower_leg
-	bounds: 999, 1943, 18, 33
-explorer-explorermouth01
-	bounds: 154, 302, 33, 16
-explorer-explorermouth02
-	bounds: 311, 386, 33, 16
-explorer-explorermouth03
-	bounds: 346, 386, 33, 16
-explorer-explorernose
-	bounds: 988, 1901, 9, 14
-explorer-explorerpupil
-	bounds: 549, 1491, 3, 3
-explorer-explorerright_eye_closed
-	bounds: 24, 53, 17, 15
-explorer-explorerright_eye_open
-	bounds: 959, 1864, 17, 15
-explorer-explorerspritesheetWalk
-	bounds: 200, 374, 68, 28
-explorer-explorertop_hand
-	bounds: 959, 1881, 27, 34
-explorer-explorertop_hand_gun
-	bounds: 106, 259, 27, 34
-explorer-explorerupper_arm
-	bounds: 1, 25, 21, 43
-explorer-explorerupper_leg
-	bounds: 73, 146, 17, 32
-links
-	bounds: 549, 1006, 417, 417
-mitte
-	bounds: 549, 587, 417, 417
-rechts
-	bounds: 546, 168, 417, 417
+EiViechEiFoot
+	bounds: 132, 164, 33, 18
+EiViechEi_Gesicht_Augen Zu
+	bounds: 833, 436, 44, 73
+EiViechEi_Hose
+	bounds: 242, 215, 106, 56
+EiViechEi_Oberschenkel
+	bounds: 350, 221, 47, 50
+EiViechEi_Unterarm
+	bounds: 661, 214, 43, 38
+EiViechEi_hand
+	bounds: 768, 380, 23, 22
+EiViechEi_oberarm
+	bounds: 907, 458, 27, 51
+EiViechEi_unterschenkel
+	bounds: 879, 456, 26, 53
+EiViechbusch
+	bounds: 242, 196, 22, 17
+EiViecheiBody
+	bounds: 661, 367, 105, 142
+clouds
+	bounds: 1, 273, 544, 236
+insel links
+	bounds: 661, 254, 70, 111
+insel mitte
+	bounds: 733, 261, 23, 104
+insel rechts
+	bounds: 768, 404, 63, 105
+island
+	bounds: 132, 184, 108, 87
+island2
+	bounds: 1, 1, 54, 47
+sea
+	bounds: 1, 50, 112, 96
+sky
+	bounds: 547, 205, 112, 304
+tree
+	bounds: 1, 148, 129, 123

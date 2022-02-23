@@ -95,10 +95,10 @@ public class PlayerScript extends BasicScript implements PhysicsContact {
                 impulse.set(speed.x, transformComponent.y < 6 ? 5 : speed.y);
                 break;
             case LEFT:
-                impulse.set(-5, speed.y);
+                impulse.set(-3, speed.y);
                 break;
             case RIGHT:
-                impulse.set(5, speed.y);
+                impulse.set(3, speed.y);
                 break;
 
         }

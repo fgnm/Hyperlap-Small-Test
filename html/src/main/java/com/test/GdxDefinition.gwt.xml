@@ -9,8 +9,8 @@
     <inherits name="com.ray3k.stripe" />
     <inherits name="com.esotericsoftware.spine"/>
 
-    <inherits name="com.brashmonkey.spriter101"/>
-    <inherits name="com.brashmonkey.spriter"/>
+<!--    <inherits name="com.brashmonkey.spriter101"/>-->
+<!--    <inherits name="com.brashmonkey.spriter"/>-->
 
 	<inherits name="com.test.GameMain" />
     <entry-point class="com.test.gwt.GwtLauncher" />

@@ -7,7 +7,6 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import com.test.GameMain;
 import com.test.systems.AddPlayerLibraryItemInRuntimeSystem;
 import com.test.systems.CameraSystem;
-import com.test.systems.SpriterAnimSystem;
 import games.rednblack.editor.renderer.SceneLoader;
 import games.rednblack.editor.renderer.resources.AsyncResourceManager;
 
@@ -31,7 +30,6 @@ public class TestGameLEVEL1 extends TestGameScreen {
         // set SceneLoader
         mSceneLoader.getEngine().getSystem(CameraSystem.class).setSceneLoader(mSceneLoader);
         mSceneLoader.getEngine().getSystem(AddPlayerLibraryItemInRuntimeSystem.class).setSceneLoader(mSceneLoader);
-        mSceneLoader.getEngine().getSystem(SpriterAnimSystem.class).setSceneLoader(mSceneLoader,mCamera);
 
 
 
