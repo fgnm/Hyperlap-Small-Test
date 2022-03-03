@@ -14,6 +14,7 @@ import com.test.components.PlayerComponent;
 import com.test.screens.TestGameLEVEL1;
 import com.test.systems.AddPlayerLibraryItemInRuntimeSystem;
 import com.test.systems.CameraSystem;
+import games.rednblack.editor.renderer.ExternalTypesConfiguration;
 import games.rednblack.editor.renderer.SceneConfiguration;
 import games.rednblack.editor.renderer.SceneLoader;
 import games.rednblack.editor.renderer.resources.AsyncResourceManager;
@@ -39,6 +40,8 @@ public class GameMain extends Game {
 	public AssetManager assetManager;
 	private AsyncResourceManager resourceManager;
 
+	private ExternalTypesConfiguration externalItemTypes;
+
 	@Override
 	public void create() {
 
@@ -58,10 +61,12 @@ public class GameMain extends Game {
 		assetManager.getLogger().setLevel(Logger.DEBUG);
 
 		// Add SpineItemType
-		config.addExternalItemType(new SpineItemType());
+		externalItemTypes = new ExternalTypesConfiguration();
+		externalItemTypes.addExternalItemType(new SpineItemType());
+		config.setExternalItemTypes(externalItemTypes);
 
 		// Sets a new AssetLoader for the given type
-		assetManager.setLoader(AsyncResourceManager.class,new ResourceManagerLoader(config,assetManager.getFileHandleResolver()));
+		assetManager.setLoader(AsyncResourceManager.class,new ResourceManagerLoader(externalItemTypes,assetManager.getFileHandleResolver()));
 
 		// Adds the given asset to the loading queue of the AssetManager
 		assetManager.load("project.dt",AsyncResourceManager.class);
