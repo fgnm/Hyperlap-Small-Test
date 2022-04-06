@@ -84,6 +84,8 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
             playerScriptAdded = true;
         }
 
+        mSceneLoader.getEngine().getSystem(SetFilterDataSystem.class).setNewScan(true);
+
 
     }
 

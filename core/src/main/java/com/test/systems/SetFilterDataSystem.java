@@ -45,9 +45,9 @@ public class SetFilterDataSystem extends BaseEntitySystem {
     @Override
     protected void begin() {
         // only count as long as necessary
-        if (count < 10) count++;
+        if (count < 100) count++;
         // We prefer to wait 3 frames so that all hyperlap res. are fully loaded
-        if (count == 9) firstStart = true;
+        if (count == 90) firstStart = true;
     }
 
     @Override
@@ -175,5 +175,9 @@ public class SetFilterDataSystem extends BaseEntitySystem {
         physicsBodyComponent = physicsBodyComponentComponentMapper.get(entity);
         dimensionsComponent = dimensionsComponentComponentMapper.get(entity);
         transformComponent = transformComponentComponentMapper.get(entity);
+    }
+
+    public void setNewScan(boolean newScan) {
+        this.newScan = newScan;
     }
 }
