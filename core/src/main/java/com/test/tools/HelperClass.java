@@ -12,6 +12,7 @@ import games.rednblack.editor.renderer.components.sprite.SpriteAnimationComponen
 import games.rednblack.editor.renderer.components.sprite.SpriteAnimationStateComponent;
 import games.rednblack.editor.renderer.data.CompositeItemVO;
 import games.rednblack.editor.renderer.data.ProjectInfoVO;
+import games.rednblack.editor.renderer.utils.ComponentRetriever;
 import games.rednblack.editor.renderer.utils.ItemWrapper;
 
 import java.util.ArrayList;
@@ -85,30 +86,10 @@ public class HelperClass {
         mSceneLoader.getEngine().getEntity(tmpEntity).getComponents(tmpBag);
         System.out.println("HelperClass - loadCompositeFromLib with components array entity components: " + tmpBag.toString());
 
-    }
+        MainItemComponent mainItemComponent = ComponentRetriever.get(tmpEntity, MainItemComponent.class, mSceneLoader.getEngine());
+        System.out.println(mainItemComponent.tags);
+        }
 
-//    // Load Composite Item from HyperLap2D's Library and add component
-//    public static <T extends PooledComponent> void loadCompositeFromLib(SceneLoader mSceneLoader, String libraryName, String layer, float posX, float posY, ArrayList<Component> components){
-//        System.out.println("HelperClass - loadCompositeFromLib with components array");
-//
-//        CompositeItemVO tmpComposite = mSceneLoader.loadVoFromLibrary(libraryName);
-//        tmpComposite.layerName = layer;
-//        tmpComposite.x = posX;
-//        tmpComposite.y = posY;
-//
-//        int tmpEntity = mSceneLoader.getEntityFactory().createEntity(mSceneLoader.getRoot(),tmpComposite);
-//        mSceneLoader.getEntityFactory().initAllChildren(tmpEntity,tmpComposite.composite);
-//
-//        for (int i = 0; i < components.size(); i++) {
-//            mSceneLoader.getEngine().edit(tmpEntity).create(components.get(i).getClass());
-//            System.out.println("HelperClass - loadCompositeFromLib with components array round " + i);
-//        }
-//
-//        Bag tmpBag = new Bag();
-//        mSceneLoader.getEngine().getEntity(tmpEntity).getComponents(tmpBag);
-//        System.out.println("HelperClass - loadCompositeFromLib with components array entity components: " + tmpBag.toString());
-//
-//    }
 
     // Load Composite Item from HyperLap2D's Library directly inside a nodeComponent from a composite
     public static <T extends PooledComponent> void loadCompositeFromLibInsideNodeComponent(SceneLoader mSceneLoader, String libraryName, String layer, float posX, float posY, NodeComponent nodeComponent, int compositeEntity){

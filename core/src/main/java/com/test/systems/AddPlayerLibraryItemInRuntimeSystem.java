@@ -15,6 +15,8 @@ import java.util.ArrayList;
 @All(PhysicsBodyComponent.class)
 public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
 
+    protected boolean playerLoaded;
+
     protected SceneLoader mSceneLoader;
 
     private boolean playerScriptAdded = false;
@@ -32,6 +34,7 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
         System.out.println("[AddPlayerLibraryItemInRuntimeSystem] initStartValues");
         counter = 0;
         playerScriptAdded = false;
+        playerLoaded = false;
     }
 
     @Override
@@ -58,13 +61,18 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
 
     private void addPlayerAndComponents() {
 
-        ArrayList<Component> components = new ArrayList<Component>();
-        components.add(new PlayerComponent());
-        components.add(new SpineMustManagedComponent());
+        if (!playerLoaded) {
+            ArrayList<Component> components = new ArrayList<Component>();
+            components.add(new PlayerComponent());
+            components.add(new SpineMustManagedComponent());
 
-        HelperClass.loadCompositeFromLib(mSceneLoader,"SpineEiV2","Default",0,5,components);
+            HelperClass.loadCompositeFromLib(mSceneLoader,"SpineEiV2","Default",0,5,components);
 
-        System.out.println("[AddPlayerLibraryItemInRuntimeSystem] addComponentByTagName");
+            System.out.println("[AddPlayerLibraryItemInRuntimeSystem] addComponentByTagName");
+            playerLoaded = true;
+
+            mSceneLoader.getEngine().process();
+        }
 
     }
 

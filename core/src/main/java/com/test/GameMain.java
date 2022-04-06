@@ -14,7 +14,7 @@ import com.test.components.PlayerComponent;
 import com.test.screens.TestGameLEVEL1;
 import com.test.systems.AddPlayerLibraryItemInRuntimeSystem;
 import com.test.systems.CameraSystem;
-import com.test.systems.SetFilterDataSystemNew;
+import com.test.systems.SetFilterDataSystem;
 import games.rednblack.editor.renderer.ExternalTypesConfiguration;
 import games.rednblack.editor.renderer.SceneConfiguration;
 import games.rednblack.editor.renderer.SceneLoader;
@@ -84,7 +84,7 @@ public class GameMain extends Game {
 		// add systems
 		config.addSystem(new CameraSystem(-50,50));
 		config.addSystem(new AddPlayerLibraryItemInRuntimeSystem());
-		config.addSystem(new SetFilterDataSystemNew());
+		config.addSystem(new SetFilterDataSystem());
 
 		// Initialize HyperLap2D's SceneLoader, all assets will be loaded here
 		mSceneLoader = new SceneLoader(config);
