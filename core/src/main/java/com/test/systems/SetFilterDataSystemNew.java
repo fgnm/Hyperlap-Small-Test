@@ -38,9 +38,6 @@ public class SetFilterDataSystemNew extends IteratingSystem {
     protected DimensionsComponent dimensionsComponent;
     protected TransformComponent transformComponent;
 
-
-
-
     private boolean firstStart = false;
     public int count = 0;
 
@@ -65,7 +62,7 @@ public class SetFilterDataSystemNew extends IteratingSystem {
             if (firstStart | newScan) {
 
                 IntBag entities = mSceneLoader.getEngine().getAspectSubscriptionManager()
-                        .get(Aspect.all(MainItemComponent.class))
+                        .get(Aspect.all(PhysicsBodyComponent.class))
                         .getEntities();
 
                 System.out.println("[SetFilterDataSystemNew] process - All entities size: " + entities.size());

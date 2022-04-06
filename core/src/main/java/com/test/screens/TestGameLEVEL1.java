@@ -35,7 +35,6 @@ public class TestGameLEVEL1 extends TestGameScreen {
 
         // set SceneLoader
         mSceneLoader.getEngine().getSystem(CameraSystem.class).initStartValues();
-        mSceneLoader.getEngine().getSystem(AddPlayerLibraryItemInRuntimeSystem.class).initStartValues();
 
 
 
@@ -46,6 +45,7 @@ public class TestGameLEVEL1 extends TestGameScreen {
 
         if (Gdx.input.isKeyJustPressed(Input.Keys.F)) {
             gameMain.setScreen(new TestGameLEVEL1(resourceManager,mSceneLoader,mViewport,assetManager,mCamera,gameMain,"MainScene"));
+            mSceneLoader.getEngine().getSystem(AddPlayerLibraryItemInRuntimeSystem.class).initStartValues();
         }
 
         newScene();
@@ -59,6 +59,8 @@ public class TestGameLEVEL1 extends TestGameScreen {
         // System "DeleteEntitys" set this flag to true if player dead
         if (firstScreenNewScene) {
             gameMain.setScreen(new TestGameLEVEL1(resourceManager,mSceneLoader,mViewport,assetManager,mCamera,gameMain,"MainScene"));
+            mSceneLoader.getEngine().getSystem(AddPlayerLibraryItemInRuntimeSystem.class).initStartValues();
+
         }
     }
 

@@ -22,7 +22,10 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
     private int counter = 0;
 
     public AddPlayerLibraryItemInRuntimeSystem() {
+
         System.out.println("[AddPlayerLibraryItemInRuntimeSystem] init");
+        counter = 0;
+        playerScriptAdded = false;
     }
 
     public void initStartValues() {
