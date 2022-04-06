@@ -7,7 +7,7 @@
 	"width": 1095.47,
 	"height": 2100.81,
 	"fps": 50.5,
-	"images": "./images/",
+	"images": "./images/orig/",
 	"audio": ""
 },
 "bones": [

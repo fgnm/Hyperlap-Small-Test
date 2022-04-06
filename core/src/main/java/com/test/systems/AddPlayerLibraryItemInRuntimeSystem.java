@@ -15,7 +15,7 @@ import java.util.ArrayList;
 @All(PhysicsBodyComponent.class)
 public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
 
-    private SceneLoader mSceneLoader;
+    protected SceneLoader mSceneLoader;
 
     private boolean playerScriptAdded = false;
 
@@ -25,12 +25,10 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
         System.out.println("[AddPlayerLibraryItemInRuntimeSystem] init");
     }
 
-    public void setSceneLoader(SceneLoader mSceneLoader) {
-        this.mSceneLoader = mSceneLoader;
+    public void initStartValues() {
+        System.out.println("[AddPlayerLibraryItemInRuntimeSystem] initStartValues");
         counter = 0;
         playerScriptAdded = false;
-
-
     }
 
     @Override

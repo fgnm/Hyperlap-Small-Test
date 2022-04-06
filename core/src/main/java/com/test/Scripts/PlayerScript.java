@@ -92,13 +92,13 @@ public class PlayerScript extends BasicScript implements PhysicsContact {
             case JUMP:
                 TransformComponent transformComponent = transformMapper.get(playerEntity);
 
-                impulse.set(speed.x, transformComponent.y < 6 ? 5 : speed.y);
+                impulse.set(speed.x, transformComponent.y < 6 ? 10 : speed.y);
                 break;
             case LEFT:
-                impulse.set(-3, speed.y);
+                impulse.set(-6, speed.y);
                 break;
             case RIGHT:
-                impulse.set(3, speed.y);
+                impulse.set(6, speed.y);
                 break;
 
         }
@@ -116,13 +116,13 @@ public class PlayerScript extends BasicScript implements PhysicsContact {
 
         // all spines will be scaled in moving direction
         if (velX < -0.5f) {
-            if (transformComponent.scaleX == -1)
-                transformComponent.scaleX = 1;
+            if (transformComponent.scaleX == 1f)
+                transformComponent.scaleX = -1f;
 
 
         }else if (velX > 0.5f) {
-            if (transformComponent.scaleX == 1)
-                transformComponent.scaleX = -1;
+            if (transformComponent.scaleX == -1f)
+                transformComponent.scaleX = 1f;
         }
 
         NodeComponent nodeComponent = nodeMapper.get(playerEntity);
@@ -208,7 +208,8 @@ public class PlayerScript extends BasicScript implements PhysicsContact {
 
     @Override
     public void preSolve(int contactEntity, Fixture contactFixture, Fixture ownFixture, Contact contact) {
-        TransformComponent transformComponent = transformMapper.get(this.entity);
+        TransformComponent transformComponent = transformMapper.get(this.playerEntity);
+
 
         TransformComponent colliderTransform = transformMapper.get(contactEntity);
     }

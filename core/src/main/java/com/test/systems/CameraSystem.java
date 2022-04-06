@@ -10,7 +10,6 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector3;
-import com.test.GameMain;
 import com.test.tools.HelperClass;
 import games.rednblack.editor.renderer.SceneLoader;
 import games.rednblack.editor.renderer.components.TransformComponent;
@@ -21,8 +20,8 @@ import games.rednblack.editor.renderer.utils.ItemWrapper;
 @All(ViewPortComponent.class)
 public class CameraSystem extends IteratingSystem {
 
-    private SceneLoader mSceneLoader;
-    private ItemWrapper root;
+    protected SceneLoader mSceneLoader;
+    protected ItemWrapper root;
     private int playerEntity = -1;
 
     protected ComponentMapper<TransformComponent> transformMapper;
@@ -37,8 +36,7 @@ public class CameraSystem extends IteratingSystem {
         this.yMax = yMax;
     }
 
-    public void setSceneLoader(SceneLoader mSceneLoader) {
-        this.mSceneLoader = mSceneLoader;
+    public void initStartValues() {
         playerEntity = -1;
     }
 

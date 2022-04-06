@@ -14,6 +14,7 @@ import com.test.components.PlayerComponent;
 import com.test.screens.TestGameLEVEL1;
 import com.test.systems.AddPlayerLibraryItemInRuntimeSystem;
 import com.test.systems.CameraSystem;
+import com.test.systems.SetFilterDataSystemNew;
 import games.rednblack.editor.renderer.ExternalTypesConfiguration;
 import games.rednblack.editor.renderer.SceneConfiguration;
 import games.rednblack.editor.renderer.SceneLoader;
@@ -21,6 +22,7 @@ import games.rednblack.editor.renderer.resources.AsyncResourceManager;
 import games.rednblack.editor.renderer.resources.ResourceManagerLoader;
 import games.rednblack.editor.renderer.systems.strategy.HyperLap2dInvocationStrategy;
 import games.rednblack.editor.renderer.utils.ComponentRetriever;
+import games.rednblack.editor.renderer.utils.TextureArrayCpuPolygonSpriteBatch;
 import games.rednblack.h2d.extension.spine.SpineItemType;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
@@ -33,7 +35,7 @@ public class GameMain extends Game {
 	private SceneConfiguration config;
 
 	private SceneLoader mSceneLoader;
-	private Viewport mViewport;
+	protected Viewport mViewport;
 	private OrthographicCamera mCamera;
 	private Box2DDebugRenderer box2DDebugRenderer;
 
@@ -49,7 +51,8 @@ public class GameMain extends Game {
 		Gdx.app.setLogLevel(Application.LOG_DEBUG);
 
 		// init SceneConfiguration
-		config = new SceneConfiguration(20000);
+//		config = new SceneConfiguration(20000);
+		config = new SceneConfiguration(new TextureArrayCpuPolygonSpriteBatch(20000));
 
 		//Create a basic camera and a viewport
 		mCamera = new OrthographicCamera();
@@ -81,6 +84,7 @@ public class GameMain extends Game {
 		// add systems
 		config.addSystem(new CameraSystem(-50,50));
 		config.addSystem(new AddPlayerLibraryItemInRuntimeSystem());
+		config.addSystem(new SetFilterDataSystemNew());
 
 		// Initialize HyperLap2D's SceneLoader, all assets will be loaded here
 		mSceneLoader = new SceneLoader(config);
@@ -89,6 +93,8 @@ public class GameMain extends Game {
 		ComponentRetriever.addMapper(PlayerComponent.class);
 
 		box2DDebugRenderer = new Box2DDebugRenderer();
+
+		HyperLap2dInvocationStrategy.setTimeStep(timeStep);
 
 		setScreen();
 	}
@@ -106,9 +112,10 @@ public class GameMain extends Game {
 
 		getScreen().render(Gdx.graphics.getDeltaTime());;
 
-		HyperLap2dInvocationStrategy.setTimeStep(timeStep);
+		mViewport.apply();
+		box2DDebugRenderer.render(mSceneLoader.getWorld(),mCamera.combined);
 
-//		box2DDebugRenderer.render(mSceneLoader.getWorld(),mViewport.getCamera().combined);
+
 	}
 
 	public void setScreen() {

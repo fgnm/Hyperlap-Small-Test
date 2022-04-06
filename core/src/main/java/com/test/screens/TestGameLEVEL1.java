@@ -1,6 +1,8 @@
 package com.test.screens;
 
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.viewport.Viewport;
@@ -25,11 +27,15 @@ public class TestGameLEVEL1 extends TestGameScreen {
         // ---
 
         mSceneLoader.loadScene(super.sceneName, mViewport);
+        mSceneLoader.getEngine().process();
 
+        //Ensure that all bodies and z-index order are created
+        mSceneLoader.getEngine().process();
+        mSceneLoader.getEngine().process();
 
         // set SceneLoader
-        mSceneLoader.getEngine().getSystem(CameraSystem.class).setSceneLoader(mSceneLoader);
-        mSceneLoader.getEngine().getSystem(AddPlayerLibraryItemInRuntimeSystem.class).setSceneLoader(mSceneLoader);
+        mSceneLoader.getEngine().getSystem(CameraSystem.class).initStartValues();
+        mSceneLoader.getEngine().getSystem(AddPlayerLibraryItemInRuntimeSystem.class).initStartValues();
 
 
 
@@ -38,6 +44,10 @@ public class TestGameLEVEL1 extends TestGameScreen {
     @Override
     public void render(float delta) {
 
+        if (Gdx.input.isKeyJustPressed(Input.Keys.F)) {
+            gameMain.setScreen(new TestGameLEVEL1(resourceManager,mSceneLoader,mViewport,assetManager,mCamera,gameMain,"MainScene"));
+        }
+
         newScene();
     }
 
@@ -45,20 +55,10 @@ public class TestGameLEVEL1 extends TestGameScreen {
 
 
     private void newScene() {
+
         // System "DeleteEntitys" set this flag to true if player dead
         if (firstScreenNewScene) {
-            System.out.println("[TestGameLEVEL1] new scene");
-            GameMain.playerDead = false;
-
-            mSceneLoader.loadScene("MainScene", mViewport);
-
-            // set SceneLoader
-            mSceneLoader.getEngine().getSystem(CameraSystem.class).setSceneLoader(mSceneLoader);
-
-            // set flag false - scene loaded and player alive
-            firstScreenNewScene = false;
-
-
+            gameMain.setScreen(new TestGameLEVEL1(resourceManager,mSceneLoader,mViewport,assetManager,mCamera,gameMain,"MainScene"));
         }
     }
 
