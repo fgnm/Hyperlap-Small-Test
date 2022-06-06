@@ -3,6 +3,7 @@ package com.test.systems;
 import com.artemis.BaseEntitySystem;
 import com.artemis.Component;
 import com.artemis.annotations.All;
+import com.badlogic.gdx.Gdx;
 import com.test.Scripts.PlayerScript;
 import com.test.components.PlayerComponent;
 import com.test.components.SpineMustManagedComponent;
@@ -25,13 +26,13 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
 
     public AddPlayerLibraryItemInRuntimeSystem() {
 
-        System.out.println("[AddPlayerLibraryItemInRuntimeSystem] init");
+        Gdx.app.debug("","[AddPlayerLibraryItemInRuntimeSystem] init");
         counter = 0;
         playerScriptAdded = false;
     }
 
     public void initStartValues() {
-        System.out.println("[AddPlayerLibraryItemInRuntimeSystem] initStartValues");
+        Gdx.app.debug( "","[AddPlayerLibraryItemInRuntimeSystem] initStartValues");
         counter = 0;
         playerScriptAdded = false;
         playerLoaded = false;
@@ -40,21 +41,14 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
     @Override
     protected void processSystem() {
 
-        if (counter < 10) {
+        if (counter < 100) {
             counter++;
-        }else if (counter == 10) {
-            // add player with components
-            addPlayerAndComponents();
-            counter++;
-        }else if (counter == 17) {
-            // add player script
-            // must called after one frame behind adding the player
-            addPlayerScript();
-            counter++;
-        }else if (counter < 20) {
-            counter++;
-        }
 
+            if (counter > 10 ) {
+                if ( counter > 20 && playerLoaded && !playerScriptAdded) addPlayerScript();
+                if (!playerLoaded) addPlayerAndComponents();
+            }
+        }
 
     }
 
@@ -68,7 +62,7 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
 
             HelperClass.loadCompositeFromLib(mSceneLoader,"SpineEiV2","Default",0,5,components);
 
-            System.out.println("[AddPlayerLibraryItemInRuntimeSystem] addComponentByTagName");
+            Gdx.app.debug("","[AddPlayerLibraryItemInRuntimeSystem] addComponentByTagName");
             playerLoaded = true;
 
             mSceneLoader.getEngine().process();
@@ -78,9 +72,12 @@ public class AddPlayerLibraryItemInRuntimeSystem extends BaseEntitySystem {
 
     private void addPlayerScript() {
 
+        Gdx.app.debug("","[AddPlayerLibraryItemInRuntimeSystem] addPlayerScript - inside method with counter size: " + counter);
+        Gdx.app.debug("","[AddPlayerLibraryItemInRuntimeSystem] addPlayerScript - check if there is a player script to add......");
+
         if (mSceneLoader != null && !playerScriptAdded) {
             mSceneLoader.addScriptByTagName("player", PlayerScript.class);
-            System.out.println("[AddPlayerLibraryItemInRuntimeSystem] addPlayerScript");
+            Gdx.app.debug("","[AddPlayerLibraryItemInRuntimeSystem] addPlayerScript - script added !");
             playerScriptAdded = true;
         }
 
