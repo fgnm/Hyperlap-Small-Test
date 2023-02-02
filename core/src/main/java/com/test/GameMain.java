@@ -28,8 +28,6 @@ import games.rednblack.h2d.extension.spine.SpineItemType;
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class GameMain extends Game {
 
-	// TODO TimeStep value ?
-	int timeStep = 240;
 	public static boolean playerDead;
 
 	private SceneConfiguration config;
@@ -46,7 +44,6 @@ public class GameMain extends Game {
 
 	@Override
 	public void create() {
-
 		// Set log level
 		Gdx.app.setLogLevel(Application.LOG_DEBUG);
 
@@ -93,9 +90,6 @@ public class GameMain extends Game {
 		ComponentRetriever.addMapper(PlayerComponent.class);
 
 		box2DDebugRenderer = new Box2DDebugRenderer();
-
-		HyperLap2dInvocationStrategy.setTimeStep(timeStep);
-
 		setScreen();
 	}
 
@@ -112,10 +106,8 @@ public class GameMain extends Game {
 
 		getScreen().render(Gdx.graphics.getDeltaTime());;
 
-		mViewport.apply();
-		box2DDebugRenderer.render(mSceneLoader.getWorld(),mCamera.combined);
-
-
+		//mViewport.apply();
+		//box2DDebugRenderer.render(mSceneLoader.getWorld(),mCamera.combined);
 	}
 
 	public void setScreen() {

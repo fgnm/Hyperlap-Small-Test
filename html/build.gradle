@@ -47,7 +47,7 @@ dependencies {
     implementation "com.github.raeleus:stripe:$stripe:sources"
 
     implementation "com.esotericsoftware.spine:spine-libgdx:$spineVersion:sources"
-    implementation "games.rednblack.hyperlap2d:libgdx-spine-extension:$h2dSpineExtension:sources"
+    implementation "games.rednblack.hyperlap2d:libgdx-spine-extension:$h2dVersion:sources"
 
 //    implementation name: 'gdx-spriter-1.0.1-sources'
 //    implementation name: 'spriter-1.0.1-sources'

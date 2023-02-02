@@ -1,0 +1,43 @@
+pack.png
+	size: 1024, 512
+	filter: Linear, Linear
+EiViechEiFoot
+	bounds: 132, 164, 33, 18
+EiViechEi_Gesicht_Augen Zu
+	bounds: 833, 436, 44, 73
+EiViechEi_Hose
+	bounds: 242, 215, 106, 56
+EiViechEi_Oberschenkel
+	bounds: 350, 221, 47, 50
+EiViechEi_Unterarm
+	bounds: 661, 214, 43, 38
+EiViechEi_hand
+	bounds: 768, 380, 23, 22
+EiViechEi_oberarm
+	bounds: 907, 458, 27, 51
+EiViechEi_unterschenkel
+	bounds: 879, 456, 26, 53
+EiViechbusch
+	bounds: 242, 196, 22, 17
+EiViecheiBody
+	bounds: 661, 367, 105, 142
+clouds
+	bounds: 1, 273, 544, 236
+insel links
+	bounds: 661, 254, 70, 111
+insel mitte
+	bounds: 733, 261, 23, 104
+insel rechts
+	bounds: 768, 404, 63, 105
+island
+	bounds: 132, 184, 108, 87
+island2
+	bounds: 1, 1, 54, 47
+sea
+	bounds: 1, 50, 112, 96
+sky
+	bounds: 547, 205, 112, 304
+tree
+	bounds: 1, 148, 129, 123
+white-pixel
+	bounds: 115, 145, 1, 1

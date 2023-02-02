@@ -111,6 +111,7 @@ public class PlayerScript extends BasicScript implements PhysicsContact {
 
         TransformComponent transformComponent = transformMapper.get(playerEntity);
         PhysicsBodyComponent physicsBodyComponent = physicsMapper.get(playerEntity);
+        if (physicsBodyComponent.body == null) return;
 
         velX = physicsBodyComponent.body.getLinearVelocity().x;
         velY = physicsBodyComponent.body.getLinearVelocity().y;

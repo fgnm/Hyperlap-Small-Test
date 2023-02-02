@@ -72,8 +72,8 @@ public class CameraSystem extends IteratingSystem {
 
                     //Use lerp function to linear interpolate values to get smooth effect
                     //Change alpha value to move faster or slower
-                    camera.position.x = RoundToNearestPixel(Interpolation.smooth2.apply(camera.position.x, mVector3.x, 0.2f), viewPortComponent.pixelsPerWU);
-                    camera.position.y = RoundToNearestPixel(Interpolation.smooth2.apply(camera.position.y, mVector3.y, 0.2f), viewPortComponent.pixelsPerWU);
+                    camera.position.x = Interpolation.smooth2.apply(camera.position.x, mVector3.x, 0.2f);
+                    camera.position.y = Interpolation.smooth2.apply(camera.position.y, mVector3.y, 0.2f);
                 }
             }
 

@@ -1,0 +1,23 @@
+EiViech.png
+	size: 256, 256
+	filter: Linear, Linear
+EiFoot
+	bounds: 1, 1, 33, 18
+Ei_Gesicht_Augen Zu
+	bounds: 1, 21, 44, 73
+Ei_Hose
+	bounds: 108, 182, 106, 56
+Ei_Oberschenkel
+	bounds: 108, 130, 47, 50
+Ei_Unterarm
+	bounds: 47, 56, 43, 38
+Ei_hand
+	bounds: 47, 32, 23, 22
+Ei_oberarm
+	bounds: 157, 129, 27, 51
+Ei_unterschenkel
+	bounds: 216, 185, 26, 53
+busch
+	bounds: 108, 111, 22, 17
+eiBody
+	bounds: 1, 96, 105, 142

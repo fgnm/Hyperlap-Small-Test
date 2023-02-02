@@ -13,7 +13,7 @@ dependencies {
 	api "games.rednblack.hyperlap2d:runtime-libgdx:$h2dVersion"
 
 	api "com.esotericsoftware.spine:spine-libgdx:$spineVersion"
-	api "games.rednblack.hyperlap2d:libgdx-spine-extension:$h2dSpineExtension"
+	api "games.rednblack.hyperlap2d:libgdx-spine-extension:$h2dVersion"
 
 
 
@@ -24,4 +24,8 @@ dependencies {
 
 
 //	implementation 'com.brashmonkey.spriter:gdx-spriter:1.0.1'
+}
+
+configurations.all {
+	resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }
